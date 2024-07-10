@@ -10,4 +10,4 @@ class PersonController extends Controller {
     }
 }
 
-module.exports = PersonController;
+module.exports = PersonController
