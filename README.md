@@ -17,3 +17,5 @@ npx sequelize-cli db:seed:all
 npx sequelize-cli model:generate --name Category --attributes title:string
 
 npx sequelize-cli model:generate --name Course --attributes title:string,decription:string,date_initial:dateonly
+
+npx sequelize-cli model:generate --name Registration --attributes status:string
