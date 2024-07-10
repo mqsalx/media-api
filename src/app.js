@@ -1,13 +1,8 @@
-const express = require('express');
+const express = require('express')
+const routes = require('./routes/index.js')
 
-const app = express();
+const app = express()
 
-app.use(express.json());
-
-app.get("/test", (req, res) => {
-  res
-    .status(200)
-    .send({ message: "Running..." });
-});
+routes(app)
 
 module.exports = app;
