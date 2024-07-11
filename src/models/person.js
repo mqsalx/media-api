@@ -9,7 +9,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "teacher_id"
       })
       Person.hasMany(models.Registration, {
-        foreignKey: "student_id"
+        foreignKey: "student_id",
+        scope: {
+          status: "registered",
+        },
+        as: "peopleRegistrations"
       })
     }
   }
@@ -21,7 +25,7 @@ module.exports = (sequelize, DataTypes) => {
     role: DataTypes.STRING
   }, {
     sequelize,
-    modelName: "Person",
+    modelName: 'Person',
     tableName: "people",
   });
   return Person;

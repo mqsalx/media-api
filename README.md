@@ -6,7 +6,7 @@ npm install mysql2
 
 npx sequelize-cli init
 
-npx sequelize-cli model:generate --name People --attributes name:string,email:string,cpf:string,active:boolean,role:string
+npx sequelize-cli model:generate --name Person --attributes name:string,email:string,cpf:string,active:boolean,role:string
 
 npx sequelize-cli db:migrate
 
@@ -16,6 +16,20 @@ npx sequelize-cli db:seed:all
 
 npx sequelize-cli model:generate --name Category --attributes title:string
 
-npx sequelize-cli model:generate --name Course --attributes title:string,decription:string,date_initial:dateonly
+npx sequelize-cli model:generate --name Course --attributes title:string,description:string,date_initial:dateonly
 
 npx sequelize-cli model:generate --name Registration --attributes status:string
+
+npx sequelize-cli db:migrate
+
+npx sequelize-cli seed:generate --name demo-categories
+
+npx sequelize-cli seed:generate --name demo-courses
+
+npx sequelize-cli seed:generate --name demo-registrations
+
+npx sequelize-cli db:seed --seed 20240711010001-demo-categories.js
+
+npx sequelize-cli db:seed --seed 20240711010011-demo-courses.js
+
+npx sequelize-cli db:seed --seed 20240711010026-demo-registrations.js
