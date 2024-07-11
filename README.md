@@ -6,7 +6,7 @@ npm install mysql2
 
 npx sequelize-cli init
 
-npx sequelize-cli model:generate --name People --atributes name:string,email:string,cpf:string,active:boolean,role:string
+npx sequelize-cli model:generate --name People --attributes name:string,email:string,cpf:string,active:boolean,role:string
 
 npx sequelize-cli db:migrate
 
